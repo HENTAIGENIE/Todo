@@ -1,14 +1,13 @@
 //
-//  main.cpp
+//  userInput.hpp
 //  Task Manager
 //
 //  Created by Jackson Burns on 5/5/17.
 //  Copyright © 2017 Planche Gods. All rights reserved.
 //
 
-#include <iostream>
+#ifndef userInput_h
+#define userInput_h
 
-int main(int argc, const char * argv[]) {
-    
-    return 0;
-}
+
+#endif /* userInput_h */
