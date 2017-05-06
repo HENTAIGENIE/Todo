@@ -9,5 +9,8 @@
 #ifndef userInput_h
 #define userInput_h
 
+#include <string>
+
+std::string parseUserInput(std::string);
 
 #endif /* userInput_h */

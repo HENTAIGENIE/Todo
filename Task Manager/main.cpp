@@ -8,7 +8,15 @@
 
 #include <iostream>
 
+#include "main.hpp"
+#include "userInput.hpp"
+
+using namespace std;
+
 int main(int argc, const char * argv[]) {
-    
+    while (isRunning){
+        cin >> userInput;
+        parseUserInput(userInput);
+    }
     return 0;
 }

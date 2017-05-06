@@ -9,5 +9,9 @@
 #ifndef main_h
 #define main_h
 
+#include <string>
+
+bool isRunning = true;
+std::string userInput;
 
 #endif /* main_h */

@@ -7,3 +7,12 @@
 //
 
 #include "userInput.hpp"
+
+using namespace std;
+
+string parseUserInput(string input){
+    string branchCommand;
+    
+    return branchCommand;
+}
+
