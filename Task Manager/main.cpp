@@ -9,17 +9,20 @@
 #include <iostream>
 
 #include "main.hpp"
-#include "userInput.hpp"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     while (isRunning){
         
-        cin >> userInput;
-        
-        parseUserInput(userInput); //eventually use this function to determine branch
+        cin >> inputCommand.rawInput;
+        inputCommand.parseUserInput(); //eventually use this function to determine branch
         
     }
+    
+    /*
+     *  [Exit program code]
+     */
+    
     return 0;
 }

@@ -8,35 +8,22 @@
 
 #include <iostream>
 
-#include "userInput.hpp"
+#include "userInterface.hpp"
+#include "stringManipulation.hpp"
 
 using namespace std;
 
-void dissectInput(string);
-string tailorString(string);
 string branchCommand;
 
-string parseUserInput(string input){
+string UserInput::parseUserInput(){
     
-    tailorString(input);
-    
-    dissectInput(input);
+    removeWhiteSpaces(rawInput);
     
     return branchCommand;
 }
 
-void dissectInput(string input){
-    
-    //probably won't need this
-    
-}
 
-string tailorString(string input){
-    
-    //trim extra white space
-    
-    return input;
-}
+
 
 
 

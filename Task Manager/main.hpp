@@ -10,8 +10,9 @@
 #define main_h
 
 #include <string>
+#include "userInput.hpp"
 
 bool isRunning = true;
-std::string userInput;
+UserInput inputCommand;
 
 #endif /* main_h */
