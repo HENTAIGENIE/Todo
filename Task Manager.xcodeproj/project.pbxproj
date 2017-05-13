@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		976F13971EBD142600EAD3DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13961EBD142600EAD3DB /* main.cpp */; };
 		976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A01EBD199D00EAD3DB /* userInterface.cpp */; };
-		976F13A41EC27FA900EAD3DB /* stringManipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A21EC27FA900EAD3DB /* stringManipulation.cpp */; };
+		976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		976F139E1EBD18BB00EAD3DB /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = main.hpp; path = "Task Manager/main.hpp"; sourceTree = "<group>"; };
 		976F139F1EBD18FB00EAD3DB /* userInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = userInterface.hpp; path = "Task Manager/userInterface.hpp"; sourceTree = "<group>"; };
 		976F13A01EBD199D00EAD3DB /* userInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = userInterface.cpp; sourceTree = "<group>"; };
-		976F13A21EC27FA900EAD3DB /* stringManipulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringManipulation.cpp; sourceTree = "<group>"; };
-		976F13A31EC27FA900EAD3DB /* stringManipulation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = stringManipulation.hpp; path = "Task Manager/stringManipulation.hpp"; sourceTree = "<group>"; };
+		976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = stringManipulation.hpp; path = "Task Manager/stringManipulation.hpp"; sourceTree = "<group>"; };
+		976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringManipulation.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 			children = (
 				976F13961EBD142600EAD3DB /* main.cpp */,
 				976F13A01EBD199D00EAD3DB /* userInterface.cpp */,
-				976F13A21EC27FA900EAD3DB /* stringManipulation.cpp */,
+				976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */,
 			);
 			name = Source;
 			path = "Task Manager";
@@ -78,7 +78,7 @@
 			children = (
 				976F139E1EBD18BB00EAD3DB /* main.hpp */,
 				976F139F1EBD18FB00EAD3DB /* userInterface.hpp */,
-				976F13A31EC27FA900EAD3DB /* stringManipulation.hpp */,
+				976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			files = (
 				976F13971EBD142600EAD3DB /* main.cpp in Sources */,
 				976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */,
-				976F13A41EC27FA900EAD3DB /* stringManipulation.cpp in Sources */,
+				976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +271,7 @@
 				976F139C1EBD142600EAD3DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

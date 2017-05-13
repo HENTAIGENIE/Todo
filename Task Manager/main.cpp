@@ -10,11 +10,23 @@
 
 #include "main.hpp"
 
+std::string branchCommand;
+
 int main(int argc, const char * argv[]) {
     while (isRunning){
         
-        inputCommand.getUserInput();
-        inputCommand.parseUserInput();
+        userCommand.getUserInput();
+        branchCommand = userCommand.parseUserInput();
+        
+        if (branchCommand == "new task"){
+            
+        }
+        else if (branchCommand == "exit"){
+            isRunning = false;
+        }
+        else{
+            
+        }
         
     }
     

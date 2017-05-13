@@ -13,7 +13,7 @@
 #include "userInterface.hpp"
 
 bool isRunning = true;
-UserInput inputCommand;
+UserInput userCommand;
 
 
 
