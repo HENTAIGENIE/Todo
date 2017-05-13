@@ -11,12 +11,14 @@
 
 #include <string>
 
+
 class UserInput{
     
 private:
     std::string rawInput;
     
 public:
+    ///Request input from user
     std::string parseUserInput();
     void getUserInput();
     

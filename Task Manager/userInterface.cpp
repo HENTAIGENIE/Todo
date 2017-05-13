@@ -8,25 +8,40 @@
 
 #include <iostream>
 
+#include <vector>
 #include "userInterface.hpp"
 #include "stringManipulation.hpp"
 
-using namespace std;
+std::string branchCommand;
 
-string branchCommand;
-
-string UserInput::parseUserInput(){
+std::string UserInput::parseUserInput(){
     
-    removeWhiteSpaces(rawInput);
+    std::vector<std::string> words;
+    std::string word;
+    
+    for (int i = 0; i < rawInput.length(); i++){
+        
+        if (rawInput[i] != ' '){
+            word += rawInput[i];
+        }
+        else if(rawInput[i] == ' ' && i != 0 && rawInput[i - 1] != ' ') {
+            words.push_back(word);
+            word = " ";
+        }
+        
+    } words.push_back(word);
+    
+    for (int i = 0; i < words.size(); i++){
+        std::cout << words[i];
+    } std::cout << std::endl;
     
     return branchCommand;
 }
 
 void UserInput::getUserInput(){
     
-    cout << "Get User Input" << endl;
-    cin >> rawInput;
-    cout << rawInput << endl;
+    std::cout << "Get User Input" << std::endl;
+    getline(std::cin, rawInput);
     
 }
 

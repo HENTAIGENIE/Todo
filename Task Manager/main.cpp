@@ -10,13 +10,11 @@
 
 #include "main.hpp"
 
-using namespace std;
-
 int main(int argc, const char * argv[]) {
     while (isRunning){
         
         inputCommand.getUserInput();
-        inputCommand.parseUserInput(); 
+        inputCommand.parseUserInput();
         
     }
     
