@@ -9,5 +9,12 @@
 #ifndef main_h
 #define main_h
 
+#include <string>
+#include "userInterface.hpp"
+
+bool isRunning = true;
+UserInput userCommand;
+
+
 
 #endif /* main_h */
