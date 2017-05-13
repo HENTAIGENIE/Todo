@@ -7,19 +7,16 @@
 //
 
 #include <iostream>
-
-#include <vector>
-#include <cctype>
 #include "userInterface.hpp"
 #include "stringManipulation.hpp"
 
 
 std::string UserInput::parseUserInput(){
     
-    trimWhiteSpace(rawInput);
-    makeLowerCase(rawInput);
+    tailoredInput = trimWhiteSpace(rawInput);
+    tailoredInput = makeLowerCase(tailoredInput);
     
-    return rawInput;
+    return tailoredInput;
 }
 
 void UserInput::getUserInput(){

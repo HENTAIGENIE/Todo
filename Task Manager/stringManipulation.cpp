@@ -8,6 +8,7 @@
 
 #include "stringManipulation.hpp"
 
+
 std::string trimWhiteSpace(std::string input){
     
     std::string output;
@@ -17,6 +18,8 @@ std::string trimWhiteSpace(std::string input){
         if (input[i] != ' ') output += input[i];
         else if(input[i] == ' ' && i != 0 && input[i - 1] != ' ') output += " ";
     }
+    if (output[output.length()-1] == ' ') output = output.substr(0,output.length()-1);
+        
     return output;
 }
 
