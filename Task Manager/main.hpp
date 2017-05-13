@@ -10,7 +10,7 @@
 #define main_h
 
 #include <string>
-#include "userInput.hpp"
+#include "userInterface.hpp"
 
 bool isRunning = true;
 UserInput inputCommand;

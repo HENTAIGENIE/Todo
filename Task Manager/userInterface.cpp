@@ -22,6 +22,14 @@ string UserInput::parseUserInput(){
     return branchCommand;
 }
 
+void UserInput::getUserInput(){
+    
+    cout << "Get User Input" << endl;
+    cin >> rawInput;
+    cout << rawInput << endl;
+    
+}
+
 
 
 

@@ -12,10 +12,13 @@
 #include <string>
 
 class UserInput{
-public:
     
+private:
     std::string rawInput;
+    
+public:
     std::string parseUserInput();
+    void getUserInput();
     
 };
  

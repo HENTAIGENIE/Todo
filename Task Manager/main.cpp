@@ -15,8 +15,8 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     while (isRunning){
         
-        cin >> inputCommand.rawInput;
-        inputCommand.parseUserInput(); //eventually use this function to determine branch
+        inputCommand.getUserInput();
+        inputCommand.parseUserInput(); 
         
     }
     
