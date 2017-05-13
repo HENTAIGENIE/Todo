@@ -10,7 +10,7 @@
 
 
 std::string trimWhiteSpace(std::string input){
-    
+    /** Remove excess white spaces*/
     std::string output;
     
     for (int i = 0; i < input.length(); i++){
@@ -31,3 +31,22 @@ std::string makeLowerCase(std::string input){
     }
     return input;
 }
+
+/* Splits string into words based on spacing
+ 
+ std::vector<std::string> words;
+ std::string word;
+ 
+ for (int i = 0; i < rawInput.length(); i++){
+ 
+ if (rawInput[i] != ' '){
+ word += rawInput[i];
+ }
+ else if(rawInput[i] == ' ' && i != 0 && rawInput[i - 1] != ' ' ) {
+ words.push_back(word);
+ word = " ";
+ }
+ 
+ } words.push_back(word); //probably has a "word" that is blank for the last element 
+ 
+ */

@@ -13,15 +13,15 @@
 
 std::string UserInput::parseUserInput(){
     
-    tailoredInput = trimWhiteSpace(rawInput);
-    tailoredInput = makeLowerCase(tailoredInput);
+    refinedInput = trimWhiteSpace(rawInput);
+    refinedInput = makeLowerCase(refinedInput);
     
-    return tailoredInput;
+    return refinedInput;
 }
 
 void UserInput::getUserInput(){
     
-    std::cout << "Get User Input" << std::endl;
+    std::cout << inputPrompt << std::endl;
     getline(std::cin, rawInput);
     
 }

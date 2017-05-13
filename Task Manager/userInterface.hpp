@@ -18,7 +18,8 @@ private:
     std::string rawInput;
     
 public:
-    std::string tailoredInput;
+    std::string refinedInput;
+    std::string inputPrompt;
     std::string parseUserInput();
     void getUserInput();
     
