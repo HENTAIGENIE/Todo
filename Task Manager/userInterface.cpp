@@ -10,13 +10,11 @@
 #include "userInterface.hpp"
 #include "stringManipulation.hpp"
 
-
+//Prompts the user for input and collects that input
 void UserInput::getUserInputFromConsole(){
     
     std::cout << promptMessage << std::endl;
     getline(std::cin, consoleInput);
-    trimWhiteSpace(&consoleInput);
-    makeLowerCase(&consoleInput);
     
 }
 

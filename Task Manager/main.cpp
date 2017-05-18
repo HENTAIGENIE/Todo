@@ -9,6 +9,7 @@
 #include <iostream>
 #include "main.hpp"
 #include "task.hpp"
+#include "stringManipulation.hpp"
 
 
 std::string branchCommand;
@@ -19,6 +20,8 @@ int main(int argc, const char * argv[]) {
         
         userCommand.promptMessage = "Input Command:";
         userCommand.getUserInputFromConsole();
+        trimWhiteSpace(&userCommand.consoleInput);
+        makeLowerCase(&userCommand.consoleInput);
         
         if (userCommand.consoleInput == "new task"){
             
