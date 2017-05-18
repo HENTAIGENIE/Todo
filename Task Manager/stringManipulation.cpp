@@ -7,29 +7,36 @@
 //
 
 #include "stringManipulation.hpp"
+#include <iostream>
 
-
-std::string trimWhiteSpace(std::string input){
-    /** Remove excess white spaces*/
+void trimWhiteSpace(std::string* p_input){
+    
+    std::string input = *p_input;
     std::string output;
     
+    //Discerns between extra spaces, characters, and necessary spacing
     for (int i = 0; i < input.length(); i++){
         
         if (input[i] != ' ') output += input[i];
         else if(input[i] == ' ' && i != 0 && input[i - 1] != ' ') output += " ";
     }
+    //Remove extra spaces accidentally created
     if (output[output.length()-1] == ' ') output = output.substr(0,output.length()-1);
         
-    return output;
+    *p_input = output;
 }
 
-std::string makeLowerCase(std::string input){
-
+void makeLowerCase(std::string* p_input){
+    
+    std::string input = *p_input;
+    
     for (int i = 0; input[i]; i++) {
         
         input[i] = tolower(input[i]);
     }
-    return input;
+    
+    *p_input = input;
+    
 }
 
 /* Splits string into words based on spacing

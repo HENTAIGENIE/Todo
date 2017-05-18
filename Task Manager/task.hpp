@@ -6,9 +6,7 @@
 //  Copyright © 2017 Planche Gods. All rights reserved.
 //
 
-#ifndef task_hpp
-#define task_hpp
+#ifndef task_h
+#define task_h
 
-
-
-#endif /* task_hpp */
+#endif /* task_h */

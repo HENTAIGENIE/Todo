@@ -11,18 +11,12 @@
 #include "stringManipulation.hpp"
 
 
-std::string UserInput::parseUserInput(){
+void UserInput::getUserInputFromConsole(){
     
-    refinedInput = trimWhiteSpace(rawInput);
-    refinedInput = makeLowerCase(refinedInput);
-    
-    return refinedInput;
-}
-
-void UserInput::getUserInput(){
-    
-    std::cout << inputPrompt << std::endl;
-    getline(std::cin, rawInput);
+    std::cout << promptMessage << std::endl;
+    getline(std::cin, consoleInput);
+    trimWhiteSpace(&consoleInput);
+    makeLowerCase(&consoleInput);
     
 }
 

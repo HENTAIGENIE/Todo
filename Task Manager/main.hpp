@@ -12,7 +12,7 @@
 #include <string>
 #include "userInterface.hpp"
 
-bool isRunning = true;
+bool shouldContinueRunning = true;
 UserInput userCommand;
 
 

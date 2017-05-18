@@ -14,29 +14,31 @@
 std::string branchCommand;
 
 int main(int argc, const char * argv[]) {
-    while (isRunning){
+    
+    while (shouldContinueRunning){
         
-        userCommand.inputPrompt = "Input Command:";
-        userCommand.getUserInput();
-        userCommand.parseUserInput();
+        userCommand.promptMessage = "Input Command:";
+        userCommand.getUserInputFromConsole();
         
-        if (userCommand.refinedInput == "new task"){
+        if (userCommand.consoleInput == "new task"){
             
             std::cout << "new task" << std::endl;
         }
-        else if (userCommand.refinedInput == "exit"){
+        else if (userCommand.consoleInput == "exit"){
             
-            isRunning = false;
+            shouldContinueRunning = false;
         }
         else{
             
-            std::cout << "\'" << userCommand.refinedInput << "\' is not a valid command" << std::endl;
+            std::cout << "\'" << userCommand.consoleInput << "\' is not a valid command" << std::endl;
         }
     }
     
     /*
+     *  [Save or some shit]
      *  [Exit program code]
      */
     
     return 0;
 }
+
