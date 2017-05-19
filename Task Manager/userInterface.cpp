@@ -11,20 +11,35 @@
 #include "stringManipulation.hpp"
 
 
-std::string UserInput::parseUserInput(){
+/*! Prompts the user for string input */
+void UserInput::requestUserInputFromConsole(){
     
-    tailoredInput = trimWhiteSpace(rawInput);
-    tailoredInput = makeLowerCase(tailoredInput);
+    std::cout << promptMessage << std::endl;
+    getline(std::cin, consoleInput);
     
-    return tailoredInput;
 }
 
-void UserInput::getUserInput(){
+/*! Set the string displayed when requesting user input */
+void UserInput::setPromptMessage(std::string set_promptMessage){
     
-    std::cout << "Get User Input" << std::endl;
-    getline(std::cin, rawInput);
+    promptMessage = set_promptMessage;
     
 }
+
+/*! Make the acquired 'user-input' uniform and easily readable */
+void UserInput::simplifyUserInput(){
+    removeExcessWhiteSpace(&consoleInput);
+    makeLowerCase(&consoleInput);
+}
+
+/*! Returns private member-string 'consoleInput' */
+std::string UserInput::getConsoleInput(void){
+    
+    return consoleInput;
+    
+}
+
+
 
 
 

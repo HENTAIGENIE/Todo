@@ -10,6 +10,7 @@
 		976F13971EBD142600EAD3DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13961EBD142600EAD3DB /* main.cpp */; };
 		976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A01EBD199D00EAD3DB /* userInterface.cpp */; };
 		976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */; };
+		976F13AB1EC739B900EAD3DB /* tasks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A91EC739B900EAD3DB /* tasks.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,11 +28,13 @@
 /* Begin PBXFileReference section */
 		976F13931EBD142600EAD3DB /* Task Manager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Task Manager"; sourceTree = BUILT_PRODUCTS_DIR; };
 		976F13961EBD142600EAD3DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		976F139E1EBD18BB00EAD3DB /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = main.hpp; path = "Task Manager/main.hpp"; sourceTree = "<group>"; };
-		976F139F1EBD18FB00EAD3DB /* userInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = userInterface.hpp; path = "Task Manager/userInterface.hpp"; sourceTree = "<group>"; };
+		976F139E1EBD18BB00EAD3DB /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
+		976F139F1EBD18FB00EAD3DB /* userInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = userInterface.hpp; sourceTree = "<group>"; };
 		976F13A01EBD199D00EAD3DB /* userInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = userInterface.cpp; sourceTree = "<group>"; };
-		976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = stringManipulation.hpp; path = "Task Manager/stringManipulation.hpp"; sourceTree = "<group>"; };
+		976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stringManipulation.hpp; sourceTree = "<group>"; };
 		976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringManipulation.cpp; sourceTree = "<group>"; };
+		976F13A91EC739B900EAD3DB /* tasks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tasks.cpp; sourceTree = "<group>"; };
+		976F13AA1EC739B900EAD3DB /* tasks.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tasks.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +51,7 @@
 		976F138A1EBD142600EAD3DB = {
 			isa = PBXGroup;
 			children = (
-				976F139D1EBD183100EAD3DB /* Headers */,
-				976F13951EBD142600EAD3DB /* Source */,
+				976F13951EBD142600EAD3DB /* Task Manager */,
 				976F13941EBD142600EAD3DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,25 +64,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		976F13951EBD142600EAD3DB /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				976F13961EBD142600EAD3DB /* main.cpp */,
-				976F13A01EBD199D00EAD3DB /* userInterface.cpp */,
-				976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */,
-			);
-			name = Source;
-			path = "Task Manager";
-			sourceTree = "<group>";
-		};
-		976F139D1EBD183100EAD3DB /* Headers */ = {
+		976F13951EBD142600EAD3DB /* Task Manager */ = {
 			isa = PBXGroup;
 			children = (
 				976F139E1EBD18BB00EAD3DB /* main.hpp */,
+				976F13961EBD142600EAD3DB /* main.cpp */,
 				976F139F1EBD18FB00EAD3DB /* userInterface.hpp */,
+				976F13A01EBD199D00EAD3DB /* userInterface.cpp */,
 				976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */,
+				976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */,
+				976F13AA1EC739B900EAD3DB /* tasks.hpp */,
+				976F13A91EC739B900EAD3DB /* tasks.cpp */,
 			);
-			name = Headers;
+			path = "Task Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976F13AB1EC739B900EAD3DB /* tasks.cpp in Sources */,
 				976F13971EBD142600EAD3DB /* main.cpp in Sources */,
 				976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */,
 				976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */,

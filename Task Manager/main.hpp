@@ -12,9 +12,9 @@
 #include <string>
 #include "userInterface.hpp"
 
-bool isRunning = true;
-UserInput userCommand;
 
+bool shouldContinueRunning = true;
+void executeCommand(std::string);
 
 
 #endif /* main_h */
