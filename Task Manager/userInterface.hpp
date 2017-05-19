@@ -15,12 +15,14 @@
 class UserInput{
    
 private:
-    
-    
-public:
     std::string consoleInput;
     std::string promptMessage;
-    void getUserInputFromConsole();
+    
+public:
+    void requestUserInputFromConsole();
+    void setPromptMessage(std::string);
+    void simplifyUserInput();
+    std::string getConsoleInput(void);
     
 };
  

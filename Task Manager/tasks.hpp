@@ -11,7 +11,15 @@
 
 #include <string>
 
-void newTask(std::string,std::string);
-void retrieveTask(std::string);
+
+class Task {
+    
+private:
+    
+public:
+    void createNewTask(std::string,std::string);
+    void retrieveTask(std::string);
+    
+};
 
 #endif /* tasks_h */

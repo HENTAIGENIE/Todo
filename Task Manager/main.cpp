@@ -8,33 +8,22 @@
 
 #include <iostream>
 #include "main.hpp"
-#include "task.hpp"
+#include "tasks.hpp"
 #include "stringManipulation.hpp"
 
 
-std::string branchCommand;
-
 int main(int argc, const char * argv[]) {
+    
+    UserInput userCommand;
+    userCommand.setPromptMessage("Input Command: ");
     
     while (shouldContinueRunning){
         
-        userCommand.promptMessage = "Input Command:";
-        userCommand.getUserInputFromConsole();
-        trimWhiteSpace(&userCommand.consoleInput);
-        makeLowerCase(&userCommand.consoleInput);
+        userCommand.requestUserInputFromConsole();
+        userCommand.simplifyUserInput();
         
-        if (userCommand.consoleInput == "new task"){
-            
-            std::cout << "new task" << std::endl;
-        }
-        else if (userCommand.consoleInput == "exit"){
-            
-            shouldContinueRunning = false;
-        }
-        else{
-            
-            std::cout << "\'" << userCommand.consoleInput << "\' is not a valid command" << std::endl;
-        }
+        executeCommand(userCommand.getConsoleInput());
+        
     }
     
     /*
@@ -43,5 +32,26 @@ int main(int argc, const char * argv[]) {
      */
     
     return 0;
+}
+
+/*! Preform an action based on the value of the 'command' argument */
+void executeCommand(std::string command){
+    
+    if (command == "new task"){
+        
+        std::cout << "new task" << std::endl;
+        
+    }
+    else if (command == "exit"){
+        
+        shouldContinueRunning = false;
+        
+    }
+    else{
+        
+        std::cout << "\'" << command << "\' is not a valid command" << std::endl;
+        
+    }
+    
 }
 

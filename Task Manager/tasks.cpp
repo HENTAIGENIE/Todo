@@ -8,7 +8,7 @@
 
 #include "tasks.hpp"
 
-void newTask(std::string taskName, std::string taskContents){
+void createNewTask(std::string taskName, std::string taskContents){
     
 }
 void retrieveTask(std::string taskName){

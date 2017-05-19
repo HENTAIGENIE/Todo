@@ -10,7 +10,7 @@
 #include <iostream>
 
 /*! Removes any extra white spacing from a string */
-void trimWhiteSpace(std::string* p_input){
+void removeExcessWhiteSpace(std::string* p_input){
     
     std::string input = *p_input;
     std::string output;

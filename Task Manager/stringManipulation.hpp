@@ -11,7 +11,7 @@
 
 #include <string>
 
-void trimWhiteSpace(std::string*);
+void removeExcessWhiteSpace(std::string*);
 void makeLowerCase(std::string*);
 
 #endif /* stringManipulation_h */
