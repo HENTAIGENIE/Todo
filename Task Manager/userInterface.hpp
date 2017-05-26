@@ -11,16 +11,15 @@
 
 #include <string>
 
+
 /*! Handles input from the user */
 class UserInput{
    
 private:
     std::string consoleInput;
-    std::string promptMessage;
     
 public:
-    void requestUserInputFromConsole();
-    void setPromptMessage(std::string);
+    void requestUserInputFromConsole(std::string promptMessage);
     void simplifyUserInput();
     std::string getConsoleInput(void);
     

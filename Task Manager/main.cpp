@@ -8,18 +8,22 @@
 
 #include <iostream>
 #include "main.hpp"
-#include "tasks.hpp"
 #include "stringManipulation.hpp"
+#include "tasks.hpp"
+#include "applicationSetup.hpp"
+
+
+UserInput userCommand;
+Task userTask;
 
 
 int main(int argc, const char * argv[]) {
     
-    UserInput userCommand;
-    userCommand.setPromptMessage("Input Command: ");
+    preformSetupRoutine();
     
     while (shouldContinueRunning){
         
-        userCommand.requestUserInputFromConsole();
+        userCommand.requestUserInputFromConsole("Input Command");
         userCommand.simplifyUserInput();
         
         executeCommand(userCommand.getConsoleInput());
@@ -34,12 +38,20 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+
 /*! Preform an action based on the value of the 'command' argument */
 void executeCommand(std::string command){
     
     if (command == "new task"){
         
-        std::cout << "new task" << std::endl;
+        userTask.createNewTask();
+        std::cout << std::string(10, '\n');
+        userTask.displayTask();
+        
+    }
+    else if (command == "list"){
+        
+        
         
     }
     else if (command == "exit"){
@@ -54,4 +66,5 @@ void executeCommand(std::string command){
     }
     
 }
+
 

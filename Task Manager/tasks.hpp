@@ -15,11 +15,18 @@
 class Task {
     
 private:
-    
+    int taskCount;
+    std::string taskName;
+    std::string taskBody;
+    void requestTaskName(void);
+    void requestTaskBody(void);
+    void retrieveTask(int);
 public:
-    void createNewTask(std::string,std::string);
-    void retrieveTask(std::string);
-    
+    void createNewTask(void);
+    void saveTask(void);
+    void displayAllTasks(void);
+    void displayTask(void);
+    std::string getTaskName(void);
 };
 
 #endif /* tasks_h */
