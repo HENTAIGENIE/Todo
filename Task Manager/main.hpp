@@ -10,13 +10,9 @@
 #define main_h
 
 #include <string>
-#include "userInterface.hpp"
 
 
 bool shouldContinueRunning = true;
-void executeCommand(std::string);
-
-
 
 
 #endif /* main_h */

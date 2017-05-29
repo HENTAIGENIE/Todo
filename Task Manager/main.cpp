@@ -13,20 +13,22 @@
 #include "applicationSetup.hpp"
 
 
-UserInput userCommand;
-Task userTask;
+std::string userCommand;
+
+void executeCommand(std::string);
+void promptUserForCommand(std::string);
+void simplifyUserInput(std::string);
 
 
+/*! Main Program */
 int main(int argc, const char * argv[]) {
     
     preformSetupRoutine();
     
     while (shouldContinueRunning){
         
-        userCommand.requestUserInputFromConsole("Input Command");
-        userCommand.simplifyUserInput();
-        
-        executeCommand(userCommand.getConsoleInput());
+        promptUserForCommand("Input Command: ");
+        executeCommand(userCommand);
         
     }
     
@@ -39,19 +41,36 @@ int main(int argc, const char * argv[]) {
 }
 
 
+/*! Request a command from the user */
+void promptUserForCommand(std::string promptMessage){
+    
+    std::cout << promptMessage << std::endl;
+    getline(std::cin, userCommand);
+    simplifyUserInput(userCommand);
+
+}
+
+
+/*! Make user input more easily readable */
+void simplifyUserInput(std::string input){
+    
+    removeExcessWhiteSpace(&userCommand);
+    makeLowerCase(&userCommand);
+    
+}
+
+
 /*! Preform an action based on the value of the 'command' argument */
 void executeCommand(std::string command){
     
     if (command == "new task"){
         
-        userTask.createNewTask();
-        std::cout << std::string(10, '\n');
-        userTask.displayTask();
+        createNewTask();
         
     }
     else if (command == "list"){
         
-        
+        displayTasks();
         
     }
     else if (command == "exit"){

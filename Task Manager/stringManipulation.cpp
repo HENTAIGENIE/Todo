@@ -46,13 +46,6 @@ void makeLowerCase(std::string* p_input){
 }
 
 
-
-
-
-
-
-
-
 /* Splits string into words based on spacing
  
  std::vector<std::string> words;

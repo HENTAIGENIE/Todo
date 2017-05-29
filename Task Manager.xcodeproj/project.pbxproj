@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9739C3791ED7BA69000C5C96 /* applicationSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9739C3771ED7BA69000C5C96 /* applicationSetup.cpp */; };
 		976F13971EBD142600EAD3DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13961EBD142600EAD3DB /* main.cpp */; };
-		976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A01EBD199D00EAD3DB /* userInterface.cpp */; };
 		976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */; };
 		976F13AB1EC739B900EAD3DB /* tasks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 976F13A91EC739B900EAD3DB /* tasks.cpp */; };
 /* End PBXBuildFile section */
@@ -32,8 +31,6 @@
 		976F13931EBD142600EAD3DB /* Task Manager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Task Manager"; sourceTree = BUILT_PRODUCTS_DIR; };
 		976F13961EBD142600EAD3DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		976F139E1EBD18BB00EAD3DB /* main.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = main.hpp; sourceTree = "<group>"; };
-		976F139F1EBD18FB00EAD3DB /* userInterface.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = userInterface.hpp; sourceTree = "<group>"; };
-		976F13A01EBD199D00EAD3DB /* userInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = userInterface.cpp; sourceTree = "<group>"; };
 		976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = stringManipulation.hpp; sourceTree = "<group>"; };
 		976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stringManipulation.cpp; sourceTree = "<group>"; };
 		976F13A91EC739B900EAD3DB /* tasks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tasks.cpp; sourceTree = "<group>"; };
@@ -72,14 +69,12 @@
 			children = (
 				976F139E1EBD18BB00EAD3DB /* main.hpp */,
 				976F13961EBD142600EAD3DB /* main.cpp */,
-				976F139F1EBD18FB00EAD3DB /* userInterface.hpp */,
-				976F13A01EBD199D00EAD3DB /* userInterface.cpp */,
 				976F13A61EC6C96800EAD3DB /* stringManipulation.hpp */,
 				976F13A71EC6C98000EAD3DB /* stringManipulation.cpp */,
 				976F13AA1EC739B900EAD3DB /* tasks.hpp */,
 				976F13A91EC739B900EAD3DB /* tasks.cpp */,
-				9739C3771ED7BA69000C5C96 /* applicationSetup.cpp */,
 				9739C3781ED7BA69000C5C96 /* applicationSetup.hpp */,
+				9739C3771ED7BA69000C5C96 /* applicationSetup.cpp */,
 			);
 			path = "Task Manager";
 			sourceTree = "<group>";
@@ -143,7 +138,6 @@
 			files = (
 				976F13AB1EC739B900EAD3DB /* tasks.cpp in Sources */,
 				976F13971EBD142600EAD3DB /* main.cpp in Sources */,
-				976F13A11EBD199D00EAD3DB /* userInterface.cpp in Sources */,
 				9739C3791ED7BA69000C5C96 /* applicationSetup.cpp in Sources */,
 				976F13A81EC6C98000EAD3DB /* stringManipulation.cpp in Sources */,
 			);
