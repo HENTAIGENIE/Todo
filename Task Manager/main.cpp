@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
     
     while (shouldContinueRunning){
         
-        std::cout << std::string(3,'\n');
+        std::cout << std::string(2,'\n');
         promptUserForCommand("Input Command: ");
         executeCommand(userCommand);
         
@@ -58,6 +58,8 @@ void simplifyUserInput(std::string input){
 /*! Preform an action based on the value of the 'command' argument */
 void executeCommand(std::string command){
     
+    std::cout << std::string(1,'\n');
+    
     if (command == "new task"){
         
         createNewTask();
@@ -66,6 +68,11 @@ void executeCommand(std::string command){
     else if (command == "list"){
         
         displayTasks();
+        
+    }
+    else if (command == "delete"){
+        
+        deleteTask();
         
     }
     else if (command == "exit"){

@@ -31,5 +31,6 @@ void createNewTask(void);
 void displayTasks(void);
 void saveTasks(void);
 void loadTasks(void);
+void deleteTask(void);
 
 #endif /* tasks_h */

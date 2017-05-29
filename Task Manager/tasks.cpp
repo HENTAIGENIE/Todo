@@ -72,6 +72,7 @@ void displayTasks(){
 
 void displayLoadedTasks(){
     
+    std::cout << std::string(30, '-') << std::endl;
     for (int i = 0; i < totalNumberOfTasks; i++){
         
         std::cout << loadedTasks[i].getTaskName() << std::endl;
@@ -123,6 +124,20 @@ void loadTasks(){
     
 }
 
+
+/*! Remove a task by specifying it's title */
+void deleteTask(){
+    std::string taskTitle;
+    std::cout << "Input Task's Title: " << std::endl;
+    getline(std::cin, taskTitle);
+    for (int i = 0; i < totalNumberOfTasks; i++){
+        if (loadedTasks[i].getTaskName() == taskTitle){
+            loadedTasks.erase(loadedTasks.begin() + i);
+            break;
+        }
+    }
+    totalNumberOfTasks+= -1;
+}
 
 
 
