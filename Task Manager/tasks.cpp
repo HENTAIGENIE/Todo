@@ -13,11 +13,10 @@
 
 
 int totalNumberOfTasks;
+int numberOfLoadedTasks;
 std::vector<Task> loadedTasks;
 
-void loadTasks(void);
 void displayLoadedTasks(void);
-void saveTasks(void);
 std::string promptUserForInput(std::string);
 
 
@@ -39,12 +38,14 @@ void Task::setTaskBody(std::string input){
 
 Task::Task(){
     
-    totalNumberOfTasks++;
     
 }
 
+
+/*! Create a new task object */
 void createNewTask(){
     
+    totalNumberOfTasks++;
     Task newTask = *new Task;
     newTask.setTaskName(promptUserForInput("Task Title: "));
     newTask.setTaskBody(promptUserForInput("Task Notes: "));
@@ -61,25 +62,63 @@ std::string promptUserForInput(std::string promptMessage){
     
 }
 
+
+/*! Display all saved and currently loaded tasks */
 void displayTasks(){
     
-    loadTasks();
     displayLoadedTasks();
-    
-}
-
-void loadTasks(){
-    
-
     
 }
 
 void displayLoadedTasks(){
     
     for (int i = 0; i < totalNumberOfTasks; i++){
+        
         std::cout << loadedTasks[i].getTaskName() << std::endl;
         std::cout << loadedTasks[i].getTaskBody() << std::endl;
         std::cout << std::string(30, '-') << std::endl;
+        
+    }
+    
+}
+
+
+/*! Save all loaded tasks */
+void saveTasks(){
+    
+    std::ofstream saveFile;
+    saveFile.open("tasks.sav", std::ios::out);
+    saveFile << totalNumberOfTasks << std::endl;
+    for (int i = 0; i < totalNumberOfTasks; i++){
+        saveFile << loadedTasks[i].getTaskName() << std::endl;
+        saveFile << loadedTasks[i].getTaskBody() << std::endl;
+    }
+    saveFile.close();
+    
+}
+
+
+/*! Load all tasks from save file */
+void loadTasks(){
+    
+    try{
+        std::string tempName, tempBody, tempTotal;
+        std::ifstream saveFile;
+        saveFile.open("tasks.sav", std::ios::in);
+        getline(saveFile, tempTotal);
+        totalNumberOfTasks = std::stoi(tempTotal);
+        for (int i = 0; i < totalNumberOfTasks; i++){
+            Task loadedTask;
+            loadedTasks.push_back(loadedTask);
+            getline(saveFile, tempName);
+            getline(saveFile, tempBody);
+            loadedTasks[i].setTaskName(tempName);
+            loadedTasks[i].setTaskBody(tempBody);
+        }
+        saveFile.close();
+    }
+    catch(std::exception e){
+        std::cout << "File Not Found" << std::endl;
     }
     
 }

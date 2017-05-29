@@ -29,5 +29,7 @@ public:
 
 void createNewTask(void);
 void displayTasks(void);
+void saveTasks(void);
+void loadTasks(void);
 
 #endif /* tasks_h */

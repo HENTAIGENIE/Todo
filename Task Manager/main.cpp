@@ -10,7 +10,6 @@
 #include "main.hpp"
 #include "stringManipulation.hpp"
 #include "tasks.hpp"
-#include "applicationSetup.hpp"
 
 
 std::string userCommand;
@@ -23,7 +22,7 @@ void simplifyUserInput(std::string);
 /*! Main Program */
 int main(int argc, const char * argv[]) {
     
-    preformSetupRoutine();
+    loadTasks();
     
     while (shouldContinueRunning){
         
@@ -33,10 +32,7 @@ int main(int argc, const char * argv[]) {
         
     }
     
-    /*
-     *  [Save or some shit]
-     *  [Exit program code]
-     */
+    saveTasks();
     
     return 0;
 }
@@ -51,8 +47,6 @@ void promptUserForCommand(std::string promptMessage){
 
 }
 
-
-/*! Make user input more easily readable */
 void simplifyUserInput(std::string input){
     
     removeExcessWhiteSpace(&userCommand);
