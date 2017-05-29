@@ -27,6 +27,7 @@ int main(int argc, const char * argv[]) {
     
     while (shouldContinueRunning){
         
+        std::cout << std::string(3,'\n');
         promptUserForCommand("Input Command: ");
         executeCommand(userCommand);
         

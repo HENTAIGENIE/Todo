@@ -8,7 +8,17 @@
 
 #include <iostream>
 #include <fstream>
+#include <vector>
 #include "tasks.hpp"
+
+
+int totalNumberOfTasks;
+std::vector<Task> loadedTasks;
+
+void loadTasks(void);
+void displayLoadedTasks(void);
+void saveTasks(void);
+std::string promptUserForInput(std::string);
 
 
 std::string Task::getTaskName(void){
@@ -29,14 +39,49 @@ void Task::setTaskBody(std::string input){
 
 Task::Task(){
     
+    totalNumberOfTasks++;
+    
 }
 
 void createNewTask(){
-    std::cout << "New task" << std::endl;
+    
+    Task newTask = *new Task;
+    newTask.setTaskName(promptUserForInput("Task Title: "));
+    newTask.setTaskBody(promptUserForInput("Task Notes: "));
+    loadedTasks.push_back(newTask);
+    
+}
+
+std::string promptUserForInput(std::string promptMessage){
+    
+    std::string output;
+    std::cout << promptMessage << std::endl;
+    getline(std::cin, output);
+    return output;
+    
 }
 
 void displayTasks(){
-    std::cout << "Display Tasks" << std::endl;
+    
+    loadTasks();
+    displayLoadedTasks();
+    
+}
+
+void loadTasks(){
+    
+
+    
+}
+
+void displayLoadedTasks(){
+    
+    for (int i = 0; i < totalNumberOfTasks; i++){
+        std::cout << loadedTasks[i].getTaskName() << std::endl;
+        std::cout << loadedTasks[i].getTaskBody() << std::endl;
+        std::cout << std::string(30, '-') << std::endl;
+    }
+    
 }
 
 
