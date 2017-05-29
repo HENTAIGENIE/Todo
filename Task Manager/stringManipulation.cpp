@@ -9,6 +9,7 @@
 #include "stringManipulation.hpp"
 #include <iostream>
 
+
 /*! Removes any extra white spacing from a string */
 void removeExcessWhiteSpace(std::string* p_input){
     
@@ -22,11 +23,12 @@ void removeExcessWhiteSpace(std::string* p_input){
         else if(input[i] == ' ' && i != 0 && input[i - 1] != ' ') output += " ";
         
     }
-    //Remove extra space created when input has trailing spaces
+    //Remove extra space created when input has trailing spaces // Find a better way to do this
     if (output[output.length()-1] == ' ') output = output.substr(0,output.length()-1);
         
     *p_input = output;
 }
+
 
 /*! Changes all alphabetic characters in a string to the lower case */
 void makeLowerCase(std::string* p_input){
@@ -42,13 +44,6 @@ void makeLowerCase(std::string* p_input){
     *p_input = input;
     
 }
-
-
-
-
-
-
-
 
 
 /* Splits string into words based on spacing
